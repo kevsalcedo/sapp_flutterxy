@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sapp_flutterxy/screens/bottom_bar.dart';
 import 'package:sapp_flutterxy/screens/drawer_bar.dart';
+import 'package:sapp_flutterxy/screens/home_screen.dart';
+import 'package:sapp_flutterxy/screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(useMaterial3: true),
-        home: const DrawerBar());
+      title: 'SApp',
+      theme: ThemeData(useMaterial3: true),
+      routes: {
+        '/home': (context) => const HomeScreen(),
+        '/profile': (context) => const ProfileScreen(),
+        '/settings': (context) => const Text(
+              'Settings',
+              style: TextStyle(fontSize: 30),
+            ),
+      },
+      home: const BottomBar(),
+    );
   }
 }
