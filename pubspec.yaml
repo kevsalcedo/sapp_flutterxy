@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   fluentui_icons: ^1.0.0
   fluentui_system_icons: ^1.1.100
+  gap: ^2.0.0
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
