@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:sapp_flutterxy/data/carousel_data.dart';
+import '../models/model_carousel.dart';
 import '../utils/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -69,7 +71,14 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   height: 200,
                   width: double.infinity,
-                  child: CarouselSlider(
+                  child: CarouselSlider.builder(
+                    itemCount: carouselImages.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final carouselImage = carouselImages[index];
+                      return CarouselImages(
+                        carouselImage: carouselImages[index],
+                      );
+                    },
                     options: CarouselOptions(
                       height: 400.0,
                       initialPage: 0,
@@ -80,28 +89,48 @@ class HomeScreen extends StatelessWidget {
                       enlargeCenterPage: true,
                       enlargeFactor: 0.3,
                     ),
-                    items: [1, 2, 3].map((i) {
-                      return Builder(
-                        builder: (BuildContext context) {
-                          return Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              decoration:
-                                  const BoxDecoration(color: Colors.amber),
-                              child: Text(
-                                'text $i',
-                                style: const TextStyle(fontSize: 16.0),
-                              ));
-                        },
-                      );
-                    }).toList(),
                   ),
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CarouselImages extends StatelessWidget {
+  final Carousel carouselImage;
+  const CarouselImages({Key? key, required this.carouselImage})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 400,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: InkWell(
+          onTap: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: const Text('Go to promotion page'),
+                action: SnackBarAction(
+                  label: 'Go to Store',
+                  onPressed: () {
+                    // Code to execute.
+                  },
+                ),
+              ),
+            );
+          },
+          child: FadeInImage(
+            placeholder: AssetImage("assets/loading1.gif"),
+            image: AssetImage(carouselImage.image),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
