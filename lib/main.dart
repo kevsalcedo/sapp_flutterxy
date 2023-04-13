@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sapp_flutterxy/screens/bottom_bar.dart';
-import 'package:sapp_flutterxy/screens/drawer_bar.dart';
-import 'package:sapp_flutterxy/screens/home_screen.dart';
-import 'package:sapp_flutterxy/screens/profile_screen.dart';
+import 'package:sapp_flutterxy/presentation/widgets/bottom_bar.dart';
+import 'package:sapp_flutterxy/presentation/widgets/drawer_bar.dart';
+import 'package:sapp_flutterxy/presentation/pages/home_screen.dart';
+import 'package:sapp_flutterxy/presentation/pages/profile_screen.dart';
 import 'package:sapp_flutterxy/utils/app_styles.dart';
 
 void main() {
