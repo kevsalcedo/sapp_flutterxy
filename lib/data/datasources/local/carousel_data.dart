@@ -1,4 +1,4 @@
-import 'package:sapp_flutterxy/models/model_carousel.dart';
+import 'package:sapp_flutterxy/domain/models/model_carousel.dart';
 
 const carouselImages = <Carousel>[
   Carousel(
