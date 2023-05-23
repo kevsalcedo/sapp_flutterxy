@@ -2,6 +2,7 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sapp_flutterxy/presentation/widgets/store_item.dart';
 import '../../utils/app_styles.dart';
 import '../widgets/carousel_with_indicator.dart';
 
@@ -71,6 +72,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const Gap(15),
                 const CarouselWithIndicator(),
+                const Gap(15),
+                const StoreItem(),
               ],
             ),
           ),
