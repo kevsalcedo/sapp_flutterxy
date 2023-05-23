@@ -15,42 +15,46 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.all(20),
             child: Column(
               children: [
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Hi dude!",
-                          style: Styles.headLineStyle3,
-                        ),
-                        const Gap(5),
-                        Text(
-                          "Let's order!",
-                          style: Styles.headLineStyle1,
-                        ),
-                      ],
-                    ),
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage("assets/images/image_bakery.jpg"),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Hi dude!",
+                            style: Styles.headLineStyle3,
+                          ),
+                          const Gap(5),
+                          Text(
+                            "Let's order!",
+                            style: Styles.headLineStyle1,
+                          ),
+                        ],
+                      ),
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/images/image_bakery.jpg"),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const Gap(15),
                 Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: const Color(0xfff4f6fd)),
