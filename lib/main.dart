@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sapp_flutterxy/presentation/pages/store_screen.dart';
 import 'package:sapp_flutterxy/presentation/widgets/bottom_bar.dart';
 import 'package:sapp_flutterxy/presentation/pages/home_screen.dart';
 import 'package:sapp_flutterxy/presentation/pages/profile_screen.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const HomeScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/store': (context) => const StoreScreen(),
         '/settings': (context) => const Text(
               'Settings',
               style: TextStyle(fontSize: 30),
