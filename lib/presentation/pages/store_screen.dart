@@ -12,15 +12,16 @@ class StoreScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            expandedHeight: 200.0,
-            collapsedHeight: 100.0,
+            expandedHeight: 170.0,
+            collapsedHeight: 90.0,
             floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               title: Text("Store name"),
+              centerTitle: true,
               background: Image(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/images/medical_plants_store.png"),
+                image: AssetImage("assets/images/hierbabuena_leaves.jpg"),
               ),
             ),
           ),
